@@ -26,7 +26,37 @@ module.exports = {
 
                 // ไม่รวม node_modules เนื่องจากเป็นของที่คนอื่นเขียน เราไม่ต้องใส่ใจ
                 exclude: /node_modules/,
-                loaders: ['babel-loader']
+                loaders: [
+                    'babel-loader'
+                ]
+            },
+            {
+                // สำหรับไฟล์นามสกุล css ให้ใช้ Loader สองตัวคือ css-loader และ style-loader
+                test: /\.css$/,
+                loaders: [
+                    'style-loader',
+                    'css-loader'
+                ]
+            },{
+                 // ใช้ Loader สามตัวสำหรับ scss
+                 test: /\/sccs$/,
+                 exclude: /node_modules/,
+                 loaders: [
+                     'style.loader',
+                     {
+                         loader: 'css-loader',
+                         query:{
+                             sourceMap: true
+                         }
+                     },
+                     {
+                         loader: 'sass-loader',
+                         query:{
+                            outputStyle: 'expanded',
+                            sourceMap: true
+                         }
+                     }
+                 ]
             }
 
         ]
