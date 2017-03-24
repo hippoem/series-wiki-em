@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import React, {Component} from 'react'
+import {render} from 'react-dom'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+export default class HelloWorld extends Component {
+  render (){
+    return (
+      <h1>Hello World</h1>
+    )
+  }
+}
+
+render(<HelloWorld/>, document.getElementById('root'))
