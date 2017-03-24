@@ -1,13 +1,25 @@
 {
   "name": "series-wiki-em",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "ATS Wiki!",
+  "main": "index.js",
+  "author": "Adthasit Suksomthawisap",
+  "license": "ISC",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
-    "react-scripts": "0.9.5"
+    "react-scripts": "0.9.5",
+    "webpact": "^2.1.0-beta.7"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"    
+  },
+  "engines": {
+    "node": "6.0.0",
+    "npm": "3.8.6"
   },
   "scripts": {
     "start": "react-scripts start",
